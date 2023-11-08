@@ -5,24 +5,34 @@ using UnityEngine.TextCore.Text;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
+    #region Componets
     Transform player;
-    [SerializeField]
-    Transform meshPlayer;
-    [SerializeField]
     Camera mainCamera;
-    [SerializeField]
     Rigidbody rb;
+    #endregion
 
-    [SerializeField]
-    float horizontalSpeed, verticalSpeed, rotationSpeed;
+    float horizontalSpeed;
 
     float t;
 
+    [SerializeField, Header("Movement")]
+    float speed;
     [SerializeField]
-    float speed, walkSpeed, runSpeed, jumpForce;
+    float walkSpeed, runSpeed;
+    bool isRunning;
+
+    [SerializeField, Header("Jump")]
+    float rayLenght;
     [SerializeField]
-    bool isRunning, isJumping;
+    float timerJump, maxTimerJump, jumpForce;
+    bool isJumping;
+
+    private void Start()
+    {
+        player = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody>();
+        mainCamera = Camera.main;
+    }
 
     private void Update()
     {
@@ -32,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Movement();
+        Jump();
         CameraMovement();
     }
 
@@ -51,29 +62,45 @@ public class PlayerMovement : MonoBehaviour
             isRunning = false;
             speed = walkSpeed;
         }
-
-        //Funzione da completare per il salto
-        if(Input.GetButton("Jump"))
-        {
-            isJumping = true;
-        }
-        else
-        {
-            isJumping = false;
-        }
     }
 
     void Movement()//Funzione per il movimento del personaggio
     {
         speed *= Time.fixedDeltaTime;
 
-        rb.velocity = new Vector3(horizontalSpeed * speed, 0f, 0f); //Funzione per far muovere il giocatore
-
-        if (isJumping) rb.AddForce(Vector3.up * Time.fixedDeltaTime * jumpForce, ForceMode.Impulse); //Al momento vola quasi come un JetPack
+        rb.velocity = new Vector3(horizontalSpeed * speed, rb.velocity.y, rb.velocity.z); //Funzione per far muovere il giocatore
 
         //Rotazione del giocatore in base alla direzione
         if (horizontalSpeed < 0f) player.transform.localEulerAngles = new Vector3(0f, -90f, 0f);
         else if( horizontalSpeed > 0f) player.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
+    }
+
+    void Jump() //Funzione per saltare
+    {
+        RaycastHit hit;
+        Ray ray = new Ray(transform.position, Vector3.down);
+
+        Debug.DrawRay(transform.position, Vector3.down * rayLenght, Color.red); //Disegno per info in scena
+
+        if (Physics.Raycast(ray, out hit, rayLenght)) //Condizione se colpisce qualcosa
+        {
+            if (hit.collider.CompareTag("Terrain")) //Se colpisce il terreno, sara' da mofidicare in futuro
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    isJumping = true;
+                    timerJump = 0f;
+                }
+            }
+        }
+
+        if (Input.GetButtonUp("Jump") || timerJump > maxTimerJump) isJumping = false; //Smette di saltare con le condizioni
+
+        if (isJumping) //Movimento continuo di salto
+        {
+            rb.velocity = new Vector3 (rb.velocity.x, jumpForce, rb.velocity.y);
+            timerJump += Time.deltaTime;
+        } 
     }
 
     void CameraMovement() //Funzione per far seguire il Player dalla telecamera con un movimento più leggero
