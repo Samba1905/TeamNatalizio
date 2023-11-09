@@ -59,7 +59,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.12f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Zololgo\OrbitZoomPanCamera\Scripts\OrbitZoomPanCamera.cs" />
+    <Compile Include="Assets\Script\Enemy\EnemyMovementAndDmg.cs" />
+    <Compile Include="Assets\Script\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Script\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Script\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
   </ItemGroup>
   <ItemGroup>

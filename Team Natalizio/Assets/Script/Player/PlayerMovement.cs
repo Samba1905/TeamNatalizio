@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float walkSpeed, runSpeed;
     bool isRunning;
-
+    
     [SerializeField, Header("Jump")]
     float rayLenght;
     [SerializeField]

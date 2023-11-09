@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Terrain
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Terrain
+  - 
   - Water
   - UI
   - 
