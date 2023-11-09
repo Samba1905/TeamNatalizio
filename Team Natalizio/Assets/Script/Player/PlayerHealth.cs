@@ -3,19 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
-
 {
-    public int maxHealth = 10;
+    [SerializeField]
+    private int maxHealth = 10;
     private int currentHealth;
-    public int damageAmount;
 
-   // Start is called before the first frame update
+    public int HealtsPoint 
+    { 
+        get
+        {
+            return currentHealth;
+        }
+
+        private set
+        {
+            if (value > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
+            else
+            {
+                currentHealth = value;
+            }
+        }
+    }
+
     void Start()
     {
         currentHealth = maxHealth;
     }
 
-  
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;

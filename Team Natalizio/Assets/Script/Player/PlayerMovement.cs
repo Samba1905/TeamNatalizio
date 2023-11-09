@@ -11,21 +11,24 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     #endregion
 
-    float horizontalSpeed;
-
-    float t;
+    float t; //Valore per movimento Camera
 
     [SerializeField, Header("Movement")]
     float speed;
     [SerializeField]
     float walkSpeed, runSpeed;
-    bool isRunning;
+    float horizontalSpeed;
+    [SerializeField]
+    float smashSpeed;
+    bool isRunning, canMove;
     
     [SerializeField, Header("Jump")]
     float rayLenght;
     [SerializeField]
     float timerJump, maxTimerJump, jumpForce;
-    bool isJumping;
+    bool isJumping, smashAttack;
+    bool onGround;
+
 
     private void Start()
     {
@@ -37,30 +40,42 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         InputComands();
+        JumpDetect();
     }
 
     private void FixedUpdate()
     {
         Movement();
-        Jump();
         CameraMovement();
     }
 
     void InputComands()
     {
         //Input per movimento
-        horizontalSpeed = Input.GetAxis("Horizontal");
+        if (canMove)
+        {
+            horizontalSpeed = Input.GetAxis("Horizontal");
 
-        //Funzione da sistemare per la corsa
-        if (Input.GetButton("Run"))
-        {
-            isRunning = true;
-            speed = runSpeed;
+            //Funzione da sistemare per la corsa
+            if (Input.GetButton("Run"))
+            {
+                isRunning = true;
+                speed = runSpeed;
+            }
+            else
+            {
+                isRunning = false;
+                speed = walkSpeed;
+            }
         }
-        else
+
+        if(!onGround) //Condizione per poter schiacciare il nemico
         {
-            isRunning = false;
-            speed = walkSpeed;
+            if(Input.GetButtonDown("Vertical"))
+            {
+                canMove = false;
+                smashAttack = true;
+            }
         }
     }
 
@@ -73,9 +88,18 @@ public class PlayerMovement : MonoBehaviour
         //Rotazione del giocatore in base alla direzione
         if (horizontalSpeed < 0f) player.transform.localEulerAngles = new Vector3(0f, -90f, 0f);
         else if( horizontalSpeed > 0f) player.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
+
+        if (isJumping) //Movimento continuo di salto
+        {
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.y);
+            timerJump += Time.deltaTime;
+        }
+
+        //Condizione per fare la schiacciata
+        if(smashAttack) rb.AddForce(Vector3.down * smashSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
     }
 
-    void Jump() //Funzione per saltare
+    void JumpDetect() //Funzione per saltare
     {
         RaycastHit hit;
         Ray ray = new Ray(transform.position, Vector3.down);
@@ -86,6 +110,9 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.collider.CompareTag("Terrain")) //Se colpisce il terreno, sara' da mofidicare in futuro
             {
+                onGround = true;
+                canMove = true;
+                smashAttack = false;
                 if (Input.GetButtonDown("Jump"))
                 {
                     isJumping = true;
@@ -93,14 +120,10 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+        else onGround = false;
 
-        if (Input.GetButtonUp("Jump") || timerJump > maxTimerJump) isJumping = false; //Smette di saltare con le condizioni
-
-        if (isJumping) //Movimento continuo di salto
-        {
-            rb.velocity = new Vector3 (rb.velocity.x, jumpForce, rb.velocity.y);
-            timerJump += Time.deltaTime;
-        } 
+        //Smette di saltare con le condizioni
+        if (Input.GetButtonUp("Jump") || timerJump > maxTimerJump) isJumping = false;
     }
 
     void CameraMovement() //Funzione per far seguire il Player dalla telecamera con un movimento più leggero
