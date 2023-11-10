@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealth = 10;
+    private int maxHealth;
     private int currentHealth;
+    [SerializeField]
+    float timerImmunity, maxTimerImmunity;
+    bool canTakeDamage;
 
-    public int HealtsPoint 
+    public int HealtPoints
     { 
         get
         {
@@ -31,19 +34,43 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        canTakeDamage = true;
+    }
+
+    void Update() 
+    { 
+        TimerImmunity();
     }
 
     public void TakeDamage(int damageAmount)
     {
-        currentHealth -= damageAmount;
-        if (currentHealth <= 0)
+        if (canTakeDamage)
         {
-            Die();
+            HealtPoints -= damageAmount;
+            Immunity();
+            timerImmunity = 0f;
+            if (HealtPoints <= 0)
+            {
+                Die();
+            }
         }
     }
+
+    bool Immunity()
+    {
+        return canTakeDamage = false;
+    }
+
+    void TimerImmunity()
+    {
+        timerImmunity += Time.deltaTime;
+        if(timerImmunity >= maxTimerImmunity) canTakeDamage = true;
+    }
+
+
     private void Die()
     {
-        // Creare logica per la gestione della morte del giocatore
+        gameObject.SetActive(false);
         Debug.Log("Il giocatore è morto.");
         // Aggiungere qui altre azioni da eseguire quando il giocatore muore (tipo resurrezione)
     }

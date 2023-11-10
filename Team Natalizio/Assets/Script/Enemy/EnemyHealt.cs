@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class EnemyHealt : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    int _currentHealt, _maxHealt;
+
+    public int HealtPoints
     {
-        
+        get
+        {
+            return _currentHealt;
+        }
+        private set
+        {
+            if(value > _maxHealt)
+            {
+                _currentHealt = _maxHealt;
+            }
+            else
+            {
+                _currentHealt = value;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int damageAmmount)
     {
-        
+        HealtPoints -= damageAmmount;
+        if(HealtPoints <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        gameObject.SetActive(false);
     }
 }
