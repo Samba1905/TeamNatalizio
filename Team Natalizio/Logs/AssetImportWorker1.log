@@ -15,7 +15,7 @@ C:/Users/samba/GitFile/PNT/Team Natalizio
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-61376
+62717
 Successfully changed project path to: C:/Users/samba/GitFile/PNT/Team Natalizio
 C:/Users/samba/GitFile/PNT/Team Natalizio
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/samba/GitFile/PNT/Team Natalizio
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3108] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 4056297597 [EditorId] 4056297597 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [16516] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 4000021347 [EditorId] 4000021347 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [3108] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 4056297597 [EditorId] 4056297597 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [16516] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 4000021347 [EditorId] 4000021347 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
-Refreshing native plugins compatible for Editor in 6.66 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 6.12 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.12f1 (4fe6e059c7ef)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/Resources/UnitySubsystems
@@ -70,51 +70,51 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56060
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.009220 seconds.
-- Loaded All Assemblies, in  0.281 seconds
+Registered in 0.008184 seconds.
+- Loaded All Assemblies, in  0.296 seconds
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 236 ms
+Android Extension - Scanning For ADB Devices 293 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.493 seconds
-Domain Reload Profiling: 773ms
-	BeginReloadAssembly (85ms)
+- Finished resetting the current domain, in  0.566 seconds
+Domain Reload Profiling: 860ms
+	BeginReloadAssembly (92ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
 	RebuildCommonClasses (25ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (111ms)
-		LoadAssemblies (84ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (119ms)
+		LoadAssemblies (91ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (109ms)
-			TypeCache.Refresh (108ms)
-				TypeCache.ScanAssembly (98ms)
+		AnalyzeDomain (116ms)
+			TypeCache.Refresh (115ms)
+				TypeCache.ScanAssembly (103ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (494ms)
+	FinalizeReload (566ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (451ms)
+		SetupLoadedEditorAssemblies (520ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (334ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (403ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (71ms)
-			ProcessInitializeOnLoadMethodAttributes (42ms)
+			ProcessInitializeOnLoadAttributes (73ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -122,8 +122,8 @@ Domain Reload Profiling: 773ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.488 seconds
-Refreshing native plugins compatible for Editor in 2.49 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.543 seconds
+Refreshing native plugins compatible for Editor in 2.43 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
@@ -132,713 +132,48 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.432 seconds
-Domain Reload Profiling: 918ms
-	BeginReloadAssembly (117ms)
+- Finished resetting the current domain, in  0.447 seconds
+Domain Reload Profiling: 988ms
+	BeginReloadAssembly (126ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (19ms)
-	RebuildCommonClasses (23ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (30ms)
-	LoadAllAssembliesAndSetupDomain (309ms)
-		LoadAssemblies (243ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (348ms)
+		LoadAssemblies (271ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (131ms)
-			TypeCache.Refresh (117ms)
-				TypeCache.ScanAssembly (105ms)
-			ScanForSourceGeneratedMonoScriptInfo (10ms)
+		AnalyzeDomain (149ms)
+			TypeCache.Refresh (133ms)
+				TypeCache.ScanAssembly (118ms)
+			ScanForSourceGeneratedMonoScriptInfo (11ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (432ms)
+	FinalizeReload (448ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (303ms)
+		SetupLoadedEditorAssemblies (320ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (27ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (45ms)
-			ProcessInitializeOnLoadAttributes (206ms)
-			ProcessInitializeOnLoadMethodAttributes (15ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 2.58 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3092 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (57.0 KB). Loaded Objects now: 3558.
-Memory consumption went from 127.9 MB to 127.9 MB.
-Total: 2.165100 ms (FindLiveObjects: 0.159900 ms CreateObjectMapping: 0.068600 ms MarkObjects: 1.862500 ms  DeleteObjects: 0.073000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 335971.557203 seconds.
-  path: Assets/2D Casual UI
-  artifactKey: Guid(eea07922793fb45d98e734985805ce9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI using Guid(eea07922793fb45d98e734985805ce9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca8adb20b65fa2c626cb2b08264a5eec') in 0.001814 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/2D Casual UI/Sprite
-  artifactKey: Guid(e768493ddca804421b25bd6727f9c844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite using Guid(e768493ddca804421b25bd6727f9c844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9869129e5f3f63202f416ba0fffbd576') in 0.000282 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 30.792784 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_34.asset
-  artifactKey: Guid(6580822d803b84c49bcb004ebd1b68cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_34.asset using Guid(6580822d803b84c49bcb004ebd1b68cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52bf2308b13c19ffb5a938e586914c4d') in 0.079280 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_58.asset
-  artifactKey: Guid(341e95f7350502940abe7806efbc1069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_58.asset using Guid(341e95f7350502940abe7806efbc1069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e60913c6446d6d27f47728ebb8614750') in 0.022721 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_51.asset
-  artifactKey: Guid(f4b07636dfb49bb48a886108f2ab69bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_51.asset using Guid(f4b07636dfb49bb48a886108f2ab69bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c1d797bcc53caa9b7ccbc058c5a57f') in 0.022230 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_48.asset
-  artifactKey: Guid(942e52f631f163c4cb85facc4b39cd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_48.asset using Guid(942e52f631f163c4cb85facc4b39cd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e77372c1c6793d1ea4771824a11bcf7b') in 0.025994 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_68.asset
-  artifactKey: Guid(e86a46d1e826d734cb15bc376ae5a78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_68.asset using Guid(e86a46d1e826d734cb15bc376ae5a78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9cb555bdf8b9ebff5bc8ad325d62098') in 0.024645 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_52.asset
-  artifactKey: Guid(cad668aaa67a1564eb79a79556877936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_52.asset using Guid(cad668aaa67a1564eb79a79556877936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9042426a61b642c4075e492871c785d0') in 0.020998 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_47.asset
-  artifactKey: Guid(f3951107b7a467c4e83418ca353d0933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_47.asset using Guid(f3951107b7a467c4e83418ca353d0933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d439f4fd52fc1ffe090c3afed1d652b') in 0.021729 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_59.asset
-  artifactKey: Guid(5b89df475aefeda45bf671fb94b03431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_59.asset using Guid(5b89df475aefeda45bf671fb94b03431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '987903edd226fb1502063f54b6c8347e') in 0.025394 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_57.asset
-  artifactKey: Guid(ea39f8ee4dd7d4c4d8a75d2f873fb231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_57.asset using Guid(ea39f8ee4dd7d4c4d8a75d2f873fb231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd423b33d5f33f2a4d7f75fb9b72ea84b') in 0.031883 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_45.asset
-  artifactKey: Guid(19ede9ff45e96084fa55050f155bf2f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_45.asset using Guid(19ede9ff45e96084fa55050f155bf2f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '080f4075d8ae1a0a2047c472416a9a69') in 0.029682 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_55.asset
-  artifactKey: Guid(e66744efb15c3b947887060916bb1f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_55.asset using Guid(e66744efb15c3b947887060916bb1f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bcca42de16fdd6a85d1ccb5f509b8cc') in 0.026984 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_65.asset
-  artifactKey: Guid(180e38a2d923bc54b8d267dc89aa163e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_65.asset using Guid(180e38a2d923bc54b8d267dc89aa163e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '961c1d8fa31e97239e5340b0b30c2242') in 0.036113 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_36.asset
-  artifactKey: Guid(7c511b5391ba34649b599aa1371bfd86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_36.asset using Guid(7c511b5391ba34649b599aa1371bfd86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a3365e06dc3ec7efc4e817b0fcd7050') in 0.021061 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.342785 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_22.asset
-  artifactKey: Guid(c4bb9356bc8a3ab4eb177ef4af886032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_22.asset using Guid(c4bb9356bc8a3ab4eb177ef4af886032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8251fb1abe7e4996e0687419967037d') in 0.019434 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_27.asset
-  artifactKey: Guid(201cf48a2f10b4345a75ddffaabfc038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_27.asset using Guid(201cf48a2f10b4345a75ddffaabfc038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20945191581d4e011ad813c4b882478f') in 0.019049 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_32.asset
-  artifactKey: Guid(c7cae901c7a390640a01d9ed26f2bb29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_32.asset using Guid(c7cae901c7a390640a01d9ed26f2bb29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '929774d5ee47ce5d298e318e88763eeb') in 0.018008 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_23.asset
-  artifactKey: Guid(aa2e22c7b61305445a914a78cae89019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_23.asset using Guid(aa2e22c7b61305445a914a78cae89019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '369b4f97a85cc3ed38527266ae2720c8') in 0.017261 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_26.asset
-  artifactKey: Guid(ef2d9902496887d46a6cd8f1f3e34a83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_26.asset using Guid(ef2d9902496887d46a6cd8f1f3e34a83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a1efef9108ebed8763ffd011f0aaa86') in 0.017637 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_3.asset
-  artifactKey: Guid(ef8d749f0b1ed2b46aa643c8cb5db9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_3.asset using Guid(ef8d749f0b1ed2b46aa643c8cb5db9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3533e89f4a6522883f5b4b0d40896615') in 0.017892 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_11.asset
-  artifactKey: Guid(af9a7e26fea4a234bac9ee29255b85d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_11.asset using Guid(af9a7e26fea4a234bac9ee29255b85d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eb4c0ed78e0e4d520bb9e74468b2501') in 0.016302 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_19.asset
-  artifactKey: Guid(e5cbd6d90beca764c99f2e6a37a5e259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_19.asset using Guid(e5cbd6d90beca764c99f2e6a37a5e259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d9d8ba526cb982a7edf66abeeb95c07') in 0.015745 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_20.asset
-  artifactKey: Guid(5124cd3cafbc4f64f968d0f8f5c886c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_20.asset using Guid(5124cd3cafbc4f64f968d0f8f5c886c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd791535be0bb8892e5bc3ade89ba7367') in 0.018385 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_14.asset
-  artifactKey: Guid(a95e6485d341e7e4d94f271095cf6b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_14.asset using Guid(a95e6485d341e7e4d94f271095cf6b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ee01875629de033d314ad8d139fa979') in 0.016877 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_17.asset
-  artifactKey: Guid(37585ecba9f75d54288d86851aba5f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_17.asset using Guid(37585ecba9f75d54288d86851aba5f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7098fb49aa4bf5ac40d3a3f6cba51b9d') in 0.017209 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_1.asset
-  artifactKey: Guid(9a70982c14a73a34ba4a685e96d3e7f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_1.asset using Guid(9a70982c14a73a34ba4a685e96d3e7f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51664cfc950279ec03b1569007d58a72') in 0.018208 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_0.asset
-  artifactKey: Guid(1df9db5ba84d8164998d707908b0b5f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_0.asset using Guid(1df9db5ba84d8164998d707908b0b5f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bb8c4937df496bdf1fb4094ab9a3240') in 0.016902 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_12.asset
-  artifactKey: Guid(25afcdd769b46054a977e5d9c5b05e2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_12.asset using Guid(25afcdd769b46054a977e5d9c5b05e2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b4ca8d45dac22aa9f088613900c8d68') in 0.016061 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_25.asset
-  artifactKey: Guid(8184e0a5efc33974eadacfe8b80c4422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_25.asset using Guid(8184e0a5efc33974eadacfe8b80c4422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e762b24257e8415400f9bb47e368ec7') in 0.024983 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_16.asset
-  artifactKey: Guid(f2a37c53b9d78b041b2e3615bad394da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_16.asset using Guid(f2a37c53b9d78b041b2e3615bad394da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26a3b0233060dc177f99e388adca3169') in 0.016129 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 9.534040 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_3.asset
-  artifactKey: Guid(ef8d749f0b1ed2b46aa643c8cb5db9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_3.asset using Guid(ef8d749f0b1ed2b46aa643c8cb5db9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32412f35f7f9cbecae87a2ff949102a5') in 0.048604 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_10.asset
-  artifactKey: Guid(bb847767ba02a454db7633740687d709) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_10.asset using Guid(bb847767ba02a454db7633740687d709) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c55840aa9d86e99f7a7b85eb4237e5d') in 0.011293 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_19.asset
-  artifactKey: Guid(e5cbd6d90beca764c99f2e6a37a5e259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_19.asset using Guid(e5cbd6d90beca764c99f2e6a37a5e259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bc1ff84c1307110440a5ecd26a0ce0e') in 0.011903 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000079 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_30.asset
-  artifactKey: Guid(e0cb1aa2f7580c2468b7ab9b9d187c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_30.asset using Guid(e0cb1aa2f7580c2468b7ab9b9d187c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39b567348f2b4274e441ccf994498fc7') in 0.013117 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_23.asset
-  artifactKey: Guid(aa2e22c7b61305445a914a78cae89019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_23.asset using Guid(aa2e22c7b61305445a914a78cae89019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2881ead34775c606fe13fda04e0e25c') in 0.009622 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_6.asset
-  artifactKey: Guid(1c84c08f70862bf41960bb7bed2915cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_6.asset using Guid(1c84c08f70862bf41960bb7bed2915cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9666e727c412c0ef97ea2505f6f54080') in 0.010834 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_21.asset
-  artifactKey: Guid(ae0e5e7d521b34e4e9ca3bcc86f54526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_21.asset using Guid(ae0e5e7d521b34e4e9ca3bcc86f54526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfc86c821fe8449e34a92fa685cb6fd5') in 0.011719 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_18.asset
-  artifactKey: Guid(403b9c80cf68aab488fe757a05c7ae20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_18.asset using Guid(403b9c80cf68aab488fe757a05c7ae20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94b7d4cce4e9be3bc0e73fac7ce0156e') in 0.010191 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_52.asset
-  artifactKey: Guid(cad668aaa67a1564eb79a79556877936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_52.asset using Guid(cad668aaa67a1564eb79a79556877936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bfe3c3b68b11dc14bf2291a6bd6965f') in 0.011428 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_24.asset
-  artifactKey: Guid(33d05ed5fd4c7b64b9c45048cbedc602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_24.asset using Guid(33d05ed5fd4c7b64b9c45048cbedc602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6547b32acf9a47404f52b79d40a8544') in 0.015426 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_26.asset
-  artifactKey: Guid(ef2d9902496887d46a6cd8f1f3e34a83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_26.asset using Guid(ef2d9902496887d46a6cd8f1f3e34a83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3e0f33f3a1c8437924e57e9b8b414c2') in 0.013035 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_15.asset
-  artifactKey: Guid(8a76c855990a43a4c9e05c897cd7bf67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_15.asset using Guid(8a76c855990a43a4c9e05c897cd7bf67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da878da16cd964f932210842678b22ec') in 0.015735 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 14.521426 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_59.asset
-  artifactKey: Guid(5b89df475aefeda45bf671fb94b03431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_59.asset using Guid(5b89df475aefeda45bf671fb94b03431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2f8cfbce1568a450637acd4b61cb4c2') in 0.012476 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_62.asset
-  artifactKey: Guid(e0d1533126b769140a25844733d0f78c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_62.asset using Guid(e0d1533126b769140a25844733d0f78c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd260a9ec60e99e67ac1a98d81b0e2993') in 0.010406 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000128 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_65.asset
-  artifactKey: Guid(180e38a2d923bc54b8d267dc89aa163e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_65.asset using Guid(180e38a2d923bc54b8d267dc89aa163e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10974a6d7df99c2fa8a0d3de51cf79d5') in 0.010338 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 46.945430 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_36.asset
-  artifactKey: Guid(7c511b5391ba34649b599aa1371bfd86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_36.asset using Guid(7c511b5391ba34649b599aa1371bfd86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '097e9d5c96c0f9490c5d32bc89316d28') in 0.025143 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_58.asset
-  artifactKey: Guid(341e95f7350502940abe7806efbc1069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_58.asset using Guid(341e95f7350502940abe7806efbc1069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39c2cbfa8e7aa3017ca7c82355ea5ffb') in 0.025111 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_62.asset
-  artifactKey: Guid(e0d1533126b769140a25844733d0f78c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_62.asset using Guid(e0d1533126b769140a25844733d0f78c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d9306e2b7524c6b7b75855e0d8fbebe') in 0.021512 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_56.asset
-  artifactKey: Guid(6b964d7165a265c42b46f41f4232a928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_56.asset using Guid(6b964d7165a265c42b46f41f4232a928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4cb8b9f32158968ae802000dd9dd295') in 0.028035 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_61.asset
-  artifactKey: Guid(0b9f48d08e38ea44990374342fbeb270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_61.asset using Guid(0b9f48d08e38ea44990374342fbeb270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a309b842399f40d4b6e732b0e04b1133') in 0.027425 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_46.asset
-  artifactKey: Guid(9440c8dc1177fe74b814a64cbe625caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_46.asset using Guid(9440c8dc1177fe74b814a64cbe625caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ed628c92253774e8e9908c037a99e23') in 0.017114 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.182865 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_24.asset
-  artifactKey: Guid(33d05ed5fd4c7b64b9c45048cbedc602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_24.asset using Guid(33d05ed5fd4c7b64b9c45048cbedc602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16830d12f5805ec0a17ab936ebc3a84b') in 0.040600 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_27.asset
-  artifactKey: Guid(201cf48a2f10b4345a75ddffaabfc038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_27.asset using Guid(201cf48a2f10b4345a75ddffaabfc038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df42d16b460281558bb71dad06d5d898') in 0.031571 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_8.asset
-  artifactKey: Guid(bd4e3616e2d27aa44aa8e28c4c52060e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_8.asset using Guid(bd4e3616e2d27aa44aa8e28c4c52060e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad37ea1fdcd1b4165f9ec1a518e646c3') in 0.028270 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_13.asset
-  artifactKey: Guid(43fbb687b4403a340b22461f93faa3cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_13.asset using Guid(43fbb687b4403a340b22461f93faa3cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a7aaa9cb4d96d67a89daed3a9831d8a') in 0.016934 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/2D Casual UI/Sprite/GUI_16.asset
-  artifactKey: Guid(f2a37c53b9d78b041b2e3615bad394da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Casual UI/Sprite/GUI_16.asset using Guid(f2a37c53b9d78b041b2e3615bad394da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa10fa9245accb4edd0d2937671dd620') in 0.018836 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.346 seconds
-Refreshing native plugins compatible for Editor in 2.13 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.629 seconds
-Domain Reload Profiling: 974ms
-	BeginReloadAssembly (123ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (21ms)
-	LoadAllAssembliesAndSetupDomain (169ms)
-		LoadAssemblies (218ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (15ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (5ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (630ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (249ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (29ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (40ms)
-			ProcessInitializeOnLoadAttributes (158ms)
-			ProcessInitializeOnLoadMethodAttributes (13ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
-Refreshing native plugins compatible for Editor in 2.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3639.
-Memory consumption went from 127.6 MB to 127.6 MB.
-Total: 2.080600 ms (FindLiveObjects: 0.179000 ms CreateObjectMapping: 0.072700 ms MarkObjects: 1.794200 ms  DeleteObjects: 0.034100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.338 seconds
-Refreshing native plugins compatible for Editor in 2.19 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.615 seconds
-Domain Reload Profiling: 951ms
-	BeginReloadAssembly (117ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (26ms)
-	RebuildCommonClasses (22ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (21ms)
-	LoadAllAssembliesAndSetupDomain (166ms)
-		LoadAssemblies (212ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (15ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (5ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (616ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (264ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (28ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (47ms)
-			ProcessInitializeOnLoadAttributes (168ms)
-			ProcessInitializeOnLoadMethodAttributes (13ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
-Refreshing native plugins compatible for Editor in 2.14 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3084 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (31.0 KB). Loaded Objects now: 3643.
-Memory consumption went from 129.8 MB to 129.8 MB.
-Total: 1.991500 ms (FindLiveObjects: 0.159000 ms CreateObjectMapping: 0.071400 ms MarkObjects: 1.723200 ms  DeleteObjects: 0.037100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 138.766376 seconds.
-  path: Assets/Script/Manager/GameManager.cs
-  artifactKey: Guid(1c99a9d1720d59c4baa0f8bb42c104b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/Manager/GameManager.cs using Guid(1c99a9d1720d59c4baa0f8bb42c104b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc5d3c741e1319f32c718111aee105ed') in 0.002713 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.343 seconds
-Refreshing native plugins compatible for Editor in 2.84 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.575 seconds
-Domain Reload Profiling: 916ms
-	BeginReloadAssembly (119ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (27ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (23ms)
-	LoadAllAssembliesAndSetupDomain (167ms)
-		LoadAssemblies (214ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (16ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (5ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (575ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (251ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (26ms)
-			SetLoadedEditorAssemblies (2ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (43ms)
-			ProcessInitializeOnLoadAttributes (160ms)
-			ProcessInitializeOnLoadMethodAttributes (15ms)
+			BeforeProcessingInitializeOnLoad (46ms)
+			ProcessInitializeOnLoadAttributes (221ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
 			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
-Refreshing native plugins compatible for Editor in 2.35 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 3.99 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3130 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 36 unused Assets / (0.7 MB). Loaded Objects now: 3680.
-Memory consumption went from 136.2 MB to 135.4 MB.
-Total: 2.327200 ms (FindLiveObjects: 0.152600 ms CreateObjectMapping: 0.057300 ms MarkObjects: 1.880900 ms  DeleteObjects: 0.235800 ms)
+Unloading 3141 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.1 KB). Loaded Objects now: 3607.
+Memory consumption went from 132.5 MB to 132.5 MB.
+Total: 2.697600 ms (FindLiveObjects: 0.171600 ms CreateObjectMapping: 0.073100 ms MarkObjects: 2.263500 ms  DeleteObjects: 0.188000 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -854,55 +189,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 618.139997 seconds.
-  path: Assets/Fonts/NewCheese.ttf
-  artifactKey: Guid(f52a867fae38efb478d4f0df692c8d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/NewCheese.ttf using Guid(f52a867fae38efb478d4f0df692c8d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d261b3c1e870f8a8d5bb6149c517fc8') in 0.077045 seconds
+  Time since last request: 464167.714428 seconds.
+  path: Assets/Modelli
+  artifactKey: Guid(d5a09ff2e5867434bb9100b01940de46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelli using Guid(d5a09ff2e5867434bb9100b01940de46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4fcf7a170784536852b64cef7229d4d') in 0.002562 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 83.095056 seconds.
-  path: Assets/Fonts/Cheerful Donuts.otf
-  artifactKey: Guid(73934c4bc29907c478e3454996e3a5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/Cheerful Donuts.otf using Guid(73934c4bc29907c478e3454996e3a5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd51664fca4ee67f1122c816e2c4f8980') in 0.016303 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Fonts/Super Space.otf
-  artifactKey: Guid(fe7a6ae22421e57429c04389c2339a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/Super Space.otf using Guid(fe7a6ae22421e57429c04389c2339a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1172a9baec02a20fe5f62bd2fa3a00d') in 0.012219 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Fonts/MattehekFree.otf
-  artifactKey: Guid(7f57c5ebc1d48384881257ae71f248e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/MattehekFree.otf using Guid(7f57c5ebc1d48384881257ae71f248e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81ddc31ef9f4ef33532f37bf572a69e4') in 0.008334 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 57.110719 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF.asset
-  artifactKey: Guid(125cb55b44b24c4393181402bc6200e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF.asset using Guid(125cb55b44b24c4393181402bc6200e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b1415a5063d65a98c3657c0f4efab0b') in 0.071262 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 8
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset
-  artifactKey: Guid(5302535af1044152a457ed104f1f4b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset using Guid(5302535af1044152a457ed104f1f4b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '107f3b9166fb130a22cbbbd92668ed9f') in 0.047713 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Number of asset objects unloaded after import = 0
