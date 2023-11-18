@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Transform player;
     Camera mainCamera;
     Rigidbody rb;
+    Animator anim;
     #endregion
 
     float t; //Valore per movimento Camera
@@ -20,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontalSpeed;
     [SerializeField]
     float smashSpeed;
-    bool isRunning, canMove;
+    bool isRunning, isWalking, canMove;
     
     [SerializeField, Header("Jump")]
     float rayLenght;
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         player = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
         mainCamera = Camera.main;
     }
 
@@ -41,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     {
         InputComands();
         JumpDetect();
+        Animation();
     }
 
     private void FixedUpdate()
@@ -60,13 +63,17 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButton("Run"))
             {
                 isRunning = true;
+                isWalking = false;
                 speed = runSpeed;
             }
             else
             {
                 isRunning = false;
+                isWalking = true;
                 speed = walkSpeed;
             }
+
+            if (horizontalSpeed == 0f) isWalking = false;
         }
 
         if(!onGround) //Condizione per poter schiacciare il nemico
@@ -135,6 +142,11 @@ public class PlayerMovement : MonoBehaviour
         float cameraPosX = Mathf.Lerp(mainCamera.transform.position.x, player.transform.position.x - 1.5f, t * Time.deltaTime); //Posizione X telecamera giocatore
         float cameraPosY = Mathf.Lerp(mainCamera.transform.position.y, player.transform.position.y + 3f, t * Time.deltaTime); //Posizione Y telecamera giocatore
         mainCamera.transform.position = new Vector3(cameraPosX, cameraPosY, mainCamera.transform.position.z); //Movimento telecamera
+    }
+
+    void Animation()
+    {
+        anim.SetBool("isWalking", isWalking);
     }
 
 }
