@@ -88,8 +88,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement()//Funzione per il movimento del personaggio
     {
-        //speed *= Time.fixedDeltaTime;
-
         rb.velocity = new Vector3(horizontalSpeed * speed * Time.deltaTime, rb.velocity.y, rb.velocity.z); //Funzione per far muovere il giocatore
 
         //Rotazione del giocatore in base alla direzione
