@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,22 @@ public class MainMenuManager : MonoBehaviour
     [Header("Panels")]
     public GameObject optionPanel;
     public GameObject videoPanel, audioPanel, gamePanel;
+    [Header("AudioSource")]
+    public Slider masterSlider;
+    public Slider musicSlider, SFXSlider;
+    public AudioSource masterVolume, musicVolume, SFXVolume;
+    private void Start()
+    {
+        if (File.Exists(Application.persistentDataPath + "/Data.json"))
+        {
+            LoadDataFile();
+        }
+    }
+
+    private void LateUpdate()
+    {
+        AudioChanger();
+    }
 
     #region MainMenu
     public void ContinueButton()
@@ -82,8 +99,16 @@ public class MainMenuManager : MonoBehaviour
     }
     #endregion
     #region Audio
+    public void AudioChanger()
+    {
+        masterVolume.volume = masterSlider.value;
+        musicVolume.volume = musicSlider.value;
+        SFXVolume.volume = SFXSlider.value;
+    }
     public void BackToOptionsFromAudio()
     {
+        SaveDataFile();
+
         audioPanel.SetActive(false);
         optionPanel.SetActive(true);
     }
@@ -95,4 +120,30 @@ public class MainMenuManager : MonoBehaviour
         optionPanel.SetActive(true);
     }
     #endregion
+
+    void SaveDataFile() //Funzione per salvare impostazioni
+    {
+        Data data = new Data();
+
+        data.masterVolume = masterVolume.volume;
+        data.musicVolume = musicVolume.volume;
+        data.SFXVolume = SFXVolume.volume;
+        //DA AGGIUNGERE TUTTO SUCCESSIVAMENTE
+
+        string json = JsonUtility.ToJson(data);
+
+        File.WriteAllText(Application.persistentDataPath + "/Data.json", json);
+    }
+
+    void LoadDataFile() //Funzione per caricare impostazioni
+    {
+        string json = File.ReadAllText(Application.persistentDataPath + "/Data.json");
+
+        Data data = JsonUtility.FromJson<Data>(json);
+
+        masterSlider.value = data.masterVolume;
+        musicSlider.value = data.musicVolume;
+        SFXSlider.value = data.SFXVolume;
+        //DA AGGIUNGERE TUTTO SUCCESSIVAMENTE
+    }
 }

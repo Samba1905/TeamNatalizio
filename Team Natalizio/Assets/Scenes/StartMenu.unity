@@ -251,6 +251,12 @@ MonoBehaviour:
   videoPanel: {fileID: 1007973111}
   audioPanel: {fileID: 1369122098}
   gamePanel: {fileID: 209980374}
+  masterSlider: {fileID: 554888001}
+  musicSlider: {fileID: 266431012}
+  SFXSlider: {fileID: 1817052339}
+  masterVolume: {fileID: 826414348}
+  musicVolume: {fileID: 870990444}
+  SFXVolume: {fileID: 1996533880}
 --- !u!1 &64364881
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +875,7 @@ GameObject:
   - component: {fileID: 266431011}
   - component: {fileID: 266431012}
   m_Layer: 5
-  m_Name: SliderAudio
+  m_Name: SliderMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2561,7 +2567,7 @@ AudioSource:
   m_GameObject: {fileID: 826414347}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 1c2ae083025608e40bd55f70d83c4f36, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2674,7 +2680,7 @@ GameObject:
   - component: {fileID: 870990443}
   - component: {fileID: 870990444}
   m_Layer: 0
-  m_Name: AudioVolume
+  m_Name: MusicVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2704,7 +2710,7 @@ AudioSource:
   m_GameObject: {fileID: 870990442}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5316926640409903573, guid: 1c2ae083025608e40bd55f70d83c4f36, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -5515,7 +5521,7 @@ AudioSource:
   m_GameObject: {fileID: 1996533878}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2697204330840801655, guid: 1c2ae083025608e40bd55f70d83c4f36, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
