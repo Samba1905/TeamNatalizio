@@ -39,7 +39,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void NewGameButton()
     {
-        //SceneManager.LoadScene(); Carica scena e crea salvataggio
+        SceneManager.LoadScene("Level1");
     }
 
     public void OptionsButton() //Apre menu opzioni
@@ -125,6 +125,7 @@ public class MainMenuManager : MonoBehaviour
     {
         Data data = new Data();
 
+        //Options per audio
         data.masterVolume = masterVolume.volume;
         data.musicVolume = musicVolume.volume;
         data.SFXVolume = SFXVolume.volume;
@@ -141,6 +142,7 @@ public class MainMenuManager : MonoBehaviour
 
         Data data = JsonUtility.FromJson<Data>(json);
 
+        //Options per audio
         masterSlider.value = data.masterVolume;
         musicSlider.value = data.musicVolume;
         SFXSlider.value = data.SFXVolume;
