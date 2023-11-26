@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Condizione per fare la schiacciata
-        if(smashAttack) rb.AddForce(Vector3.down * smashSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
+        if (smashAttack) rb.AddForce(Vector3.down * smashSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
     }
 
     void JumpDetect() //Funzione per saltare
@@ -120,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
                 smashAttack = false;
                 if (Input.GetButtonDown("Jump"))
                 {
+                    
                     isJumping = true;
                     timerJump = 0f;
                 }
@@ -145,6 +146,9 @@ public class PlayerMovement : MonoBehaviour
     void Animation()
     {
         anim.SetBool("isWalking", isWalking);
+        anim.SetBool("isFloating", !onGround);
+        anim.SetBool("isSmashing", smashAttack);
+        anim.SetBool("isRunning", isRunning);
     }
 
 }
