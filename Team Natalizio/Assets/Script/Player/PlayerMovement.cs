@@ -6,10 +6,11 @@ using UnityEngine.TextCore.Text;
 public class PlayerMovement : MonoBehaviour
 {
     #region Componets
-    Transform player;
+    Transform playerT;
     Camera mainCamera;
     Rigidbody rb;
     Animator anim;
+    Player player;
     #endregion
 
     float t; //Valore per movimento Camera
@@ -22,21 +23,26 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float smashSpeed;
     bool isRunning, isWalking, canMove;
-    
+
     [SerializeField, Header("Jump")]
     float rayLenght;
     [SerializeField]
     float timerJump, maxTimerJump, jumpForce;
+    [SerializeField]
     bool isJumping, smashAttack;
     bool onGround;
+
+    public bool SmashAttack { get { return smashAttack; } }
+    public bool OnGround { get { return onGround; } }
 
 
     private void Start()
     {
-        player = GetComponent<Transform>();
+        playerT = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         mainCamera = Camera.main;
+        player = GetComponent<Player>();
     }
 
     private void Update()
@@ -91,8 +97,8 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(horizontalSpeed * speed * Time.deltaTime, rb.velocity.y, rb.velocity.z); //Funzione per far muovere il giocatore
 
         //Rotazione del giocatore in base alla direzione
-        if (horizontalSpeed < 0f) player.transform.localEulerAngles = new Vector3(0f, -90f, 0f);
-        else if( horizontalSpeed > 0f) player.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
+        if (horizontalSpeed < 0f) playerT.transform.localEulerAngles = new Vector3(0f, -90f, 0f);
+        else if( horizontalSpeed > 0f) playerT.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 
         if (isJumping) //Movimento continuo di salto
         {
@@ -102,6 +108,11 @@ public class PlayerMovement : MonoBehaviour
 
         //Condizione per fare la schiacciata
         if (smashAttack) rb.AddForce(Vector3.down * smashSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
+
+        if(player.BounceBack)
+        {
+            smashAttack = false;
+        }
     }
 
     void JumpDetect() //Funzione per saltare
@@ -138,8 +149,8 @@ public class PlayerMovement : MonoBehaviour
         if (isRunning) t = 7.5f;
         else t = 5f;
 
-        float cameraPosX = Mathf.Lerp(mainCamera.transform.position.x, player.transform.position.x - 1.5f, t * Time.deltaTime); //Posizione X telecamera giocatore
-        float cameraPosY = Mathf.Lerp(mainCamera.transform.position.y, player.transform.position.y + 3f, t * Time.deltaTime); //Posizione Y telecamera giocatore
+        float cameraPosX = Mathf.Lerp(mainCamera.transform.position.x, playerT.transform.position.x - 1.5f, t * Time.deltaTime); //Posizione X telecamera giocatore
+        float cameraPosY = Mathf.Lerp(mainCamera.transform.position.y, playerT.transform.position.y + 3f, t * Time.deltaTime); //Posizione Y telecamera giocatore
         mainCamera.transform.position = new Vector3(cameraPosX, cameraPosY, mainCamera.transform.position.z); //Movimento telecamera
     }
 

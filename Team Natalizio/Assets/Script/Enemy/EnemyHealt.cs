@@ -26,14 +26,28 @@ public class EnemyHealt : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        _currentHealt = _maxHealt;
+    }
+
+    void Update() 
+    {
+        
+    }
+
+
     public void TakeDamage(int damageAmmount)
     {
-        HealtPoints -= damageAmmount;
+        _currentHealt -= damageAmmount;
+
         if(HealtPoints <= 0)
         {
             Die();
         }
     }
+
+
 
     void Die()
     {

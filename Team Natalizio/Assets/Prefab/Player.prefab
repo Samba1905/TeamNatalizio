@@ -799,6 +799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7690054004771242865}
   - component: {fileID: 6903082155175272577}
+  - component: {fileID: 284198529922327449}
   - component: {fileID: 5540511629177415006}
   - component: {fileID: 8185662990906535108}
   - component: {fileID: 4248447116370589361}
@@ -850,8 +851,24 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 88
+  m_Constraints: 120
   m_CollisionDetection: 2
+--- !u!114 &284198529922327449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675827095508457828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c465a3146c8e1024ea36168c31ef7b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayLenght: 0.6
+  bounceBack: 0
+  bounceForce: 12
+  timerBounce: 0
 --- !u!114 &5540511629177415006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,6 +889,8 @@ MonoBehaviour:
   timerJump: 0
   maxTimerJump: 0.22
   jumpForce: 7
+  isJumping: 0
+  smashAttack: 0
 --- !u!114 &8185662990906535108
 MonoBehaviour:
   m_ObjectHideFlags: 0
