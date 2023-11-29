@@ -41,17 +41,23 @@ public class Deer : MonoBehaviour
 
     void Movement()
     {
-        if (transform.rotation.y == 90) rb.velocity = new Vector3(-moveSpeed * Time.deltaTime, rb.velocity.y, rb.velocity.z);
-        else rb.velocity = new Vector3(moveSpeed * Time.deltaTime, rb.velocity.y, rb.velocity.z);
+        if (transform.localEulerAngles.y > 180f)
+        {
+            rb.velocity = new Vector3(-moveSpeed * Time.deltaTime, rb.velocity.y, rb.velocity.z);
+        }
+        else
+        {
+            rb.velocity = new Vector3(moveSpeed * Time.deltaTime, rb.velocity.y, rb.velocity.z);
+        }
 
         distance = waypoints[nWay].transform.position.x - transform.position.x;
 
-        if (distance < 0) transform.localEulerAngles = new Vector3(0f, -90f, 0f);
+        if (distance < 0) transform.localEulerAngles = new Vector3(0f, 270f, 0f);
         else if (distance > 0) transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 
-        if(distance < 0.25)
+        if(distance < 0.25f && distance > -0.25f)
         {
-            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, rb.velocity.z);
+            moveSpeed = 0f;
             idleTimer += Time.deltaTime;
             if(idleTimer > 4.5f)
             {

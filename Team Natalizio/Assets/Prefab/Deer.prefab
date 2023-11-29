@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6136155467703848225}
   - component: {fileID: 2181921834879343775}
   - component: {fileID: 928127258024623906}
+  - component: {fileID: 4611433580489398281}
   m_Layer: 6
   m_Name: Deer
   m_TagString: Untagged
@@ -98,6 +99,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentHealt: 0
   _maxHealt: 2
+--- !u!114 &4611433580489398281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35480072657647257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599947ef2c459494cb4f6c0f461c76fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  walkSpeed: 300
+  runSpeed: 500
+  rayDist: 0
+  isWalking: 0
+  isRunning: 0
+  isAttacking: 0
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  distance: 0
+  idleTimer: 0
 --- !u!1 &178197777499989335
 GameObject:
   m_ObjectHideFlags: 0
