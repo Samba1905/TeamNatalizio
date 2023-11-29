@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     float bounceForce, timerBounce;
 
+    public bool canDamage;
+
     public bool BounceBack { get { return bounceBack; } }
 
 
@@ -46,9 +48,12 @@ public class Player : MonoBehaviour
         {
             if (playerMove.SmashAttack && hit.collider.gameObject.layer == 6)
             {
-                hit.collider.gameObject.GetComponentInParent<EnemyHealt>().TakeDamage(1);
-                bounceBack = true;
-                timerBounce = 0;
+                if (canDamage)
+                {
+                    hit.collider.gameObject.GetComponentInParent<EnemyHealt>().TakeDamage(1);
+                    bounceBack = true;
+                    timerBounce = 0;
+                }
             }
         }
         if(playerMove.OnGround || timerBounce > 0.3f) bounceBack = false;

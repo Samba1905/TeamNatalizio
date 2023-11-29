@@ -6,6 +6,7 @@ public class EnemyHealt : MonoBehaviour
 {
     [SerializeField]
     int _currentHealt, _maxHealt;
+    Player player;
 
     public int HealtPoints
     {
@@ -28,6 +29,7 @@ public class EnemyHealt : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindAnyObjectByType<Player>();
         _currentHealt = _maxHealt;
     }
 
@@ -40,6 +42,7 @@ public class EnemyHealt : MonoBehaviour
     public void TakeDamage(int damageAmmount)
     {
         _currentHealt -= damageAmmount;
+        player.canDamage = false;
 
         if(HealtPoints <= 0)
         {

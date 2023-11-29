@@ -107,7 +107,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Condizione per fare la schiacciata
-        if (smashAttack) rb.AddForce(Vector3.down * smashSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
+        if (smashAttack)
+        {
+            player.canDamage = true;
+            rb.AddForce(Vector3.down * smashSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
+        }
 
         if(player.BounceBack)
         {
