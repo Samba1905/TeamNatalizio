@@ -112,9 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  walkSpeed: 300
-  runSpeed: 500
-  rayDist: 0
+  walkSpeed: 350
+  runSpeed: 600
+  rayDist: 12.5
   isWalking: 0
   isRunning: 0
   isAttacking: 0
