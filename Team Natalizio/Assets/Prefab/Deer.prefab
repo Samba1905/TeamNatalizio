@@ -118,11 +118,17 @@ MonoBehaviour:
   isWalking: 0
   isRunning: 0
   isAttacking: 0
+  takePosPlayer: 0
+  directionR: 0
+  restTime: 0
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
   distance: 0
   idleTimer: 0
+  distancePlayer: 0
+  restTimer: 0
+  state: 0
 --- !u!1 &178197777499989335
 GameObject:
   m_ObjectHideFlags: 0
