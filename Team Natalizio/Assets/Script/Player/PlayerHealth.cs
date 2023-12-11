@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
     private int maxHealth;
+    [SerializeField]
     private int currentHealth;
     [SerializeField]
     float timerImmunity, maxTimerImmunity;

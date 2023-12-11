@@ -5,7 +5,8 @@ using UnityEngine.UIElements;
 
 public class Deer : MonoBehaviour
 {
-    Transform player;
+    Transform playerPos;
+    PlayerHealth playerHP;
     Rigidbody rb;
     Animator anim;
     [SerializeField, Header("Speed")]
@@ -13,7 +14,7 @@ public class Deer : MonoBehaviour
     [SerializeField]
     float walkSpeed, runSpeed;
     [SerializeField]
-    float rayDist;
+    float rayDist, distDmg;
     [SerializeField]
     bool isWalking, isRunning, isAttacking;
     [SerializeField]
@@ -39,7 +40,8 @@ public class Deer : MonoBehaviour
 
     private void Start()
     {
-        player = FindAnyObjectByType<Player>().GetComponentInParent<Transform>();
+        playerHP = FindAnyObjectByType<PlayerHealth>();
+        playerPos = FindAnyObjectByType<Player>().GetComponentInParent<Transform>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         state = DeerState.normal;
@@ -130,6 +132,15 @@ public class Deer : MonoBehaviour
                 state = DeerState.attack;
             }
         }
+
+        if (Physics.Raycast(ray, out hit, distDmg))
+        {
+            Debug.DrawRay(transform.position + Vector3.up, transform.forward * hit.distance, Color.blue);
+            if (hit.collider.CompareTag("Player"))
+            {
+                playerHP.TakeDamage(1);
+            }
+        }
     }
 
     void AttackMode()
@@ -140,13 +151,13 @@ public class Deer : MonoBehaviour
 
         if(!takePosPlayer && !directionR)
         {
-            playerPosAttack = player.transform.position + new Vector3(-5f, 0f, 0f);
+            playerPosAttack = playerPos.transform.position + new Vector3(-5f, 0f, 0f);
             isAttacking = true;
             takePosPlayer = true;
         }
         else if (!takePosPlayer && directionR)
         {
-            playerPosAttack = player.transform.position + new Vector3(5f, 0f, 0f);
+            playerPosAttack = playerPos.transform.position + new Vector3(5f, 0f, 0f);
             isAttacking = true;
             takePosPlayer = true;
             
@@ -175,6 +186,7 @@ public class Deer : MonoBehaviour
         {
             state = DeerState.normal;
             takePosPlayer = false;
+            isAttacking = false;
             isRunning = false;
             isWalking = true;
             restTime = false;

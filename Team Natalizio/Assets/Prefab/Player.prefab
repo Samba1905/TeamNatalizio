@@ -869,6 +869,7 @@ MonoBehaviour:
   bounceBack: 0
   bounceForce: 12
   timerBounce: 0
+  canDamage: 0
 --- !u!114 &5540511629177415006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,7 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e53adb5fdeadb4388cb1cae345c7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 3
   timerImmunity: 0
   maxTimerImmunity: 3
 --- !u!136 &4248447116370589361

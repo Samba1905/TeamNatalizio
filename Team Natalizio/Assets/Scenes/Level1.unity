@@ -4213,6 +4213,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4611433580489398281, guid: 5ed48e11731186a46bb8fabed14bf206, type: 3}
+      propertyPath: distDmg
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611433580489398281, guid: 5ed48e11731186a46bb8fabed14bf206, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1579618288}
