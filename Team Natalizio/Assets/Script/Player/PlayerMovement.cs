@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     bool isJumping, smashAttack;
     bool onGround;
+    Ray ray;
 
     public bool SmashAttack { get { return smashAttack; } }
     public bool OnGround { get { return onGround; } }
@@ -94,11 +95,43 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement()//Funzione per il movimento del personaggio
     {
-        rb.velocity = new Vector3(horizontalSpeed * speed * Time.deltaTime, rb.velocity.y, rb.velocity.z); //Funzione per far muovere il giocatore
+         //Funzione per far muovere il giocatore
+        RaycastHit hit;
+        if (horizontalSpeed < 0f)
+        {
+            playerT.transform.localEulerAngles = new Vector3(0f, -90f, 0f);
+            ray = new Ray(transform.position, new Vector3(-0.5f, 0, 0));
+        }
+        else if (horizontalSpeed > 0f) 
+        {
+            playerT.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
+            ray = new Ray(transform.position, new Vector3(0.5f, 0, 0));
+
+        }
+
+        Debug.DrawRay(transform.position, new Vector3(0.5f, 0, 0), Color.blue);
+        if (Physics.Raycast(ray, out hit, 0.5f)) //Condizione se colpisce qualcosa
+        {
+            if (hit.collider.CompareTag("Limit")) //Se colpisce il terreno, sara' da mofidicare in futuro
+            {
+
+                rb.velocity = new Vector3(horizontalSpeed * 0 * Time.deltaTime, rb.velocity.y, rb.velocity.z);
+            }
+            else
+            {
+                rb.velocity = new Vector3(horizontalSpeed * speed * Time.deltaTime, rb.velocity.y, rb.velocity.z);
+            }
+
+        }
+        else
+        {
+            rb.velocity = new Vector3(horizontalSpeed * speed * Time.deltaTime, rb.velocity.y, rb.velocity.z);
+        }
+        if (horizontalSpeed < 0f) playerT.transform.localEulerAngles = new Vector3(0f, -90f, 0f);
+        else if (horizontalSpeed > 0f) playerT.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 
         //Rotazione del giocatore in base alla direzione
-        if (horizontalSpeed < 0f) playerT.transform.localEulerAngles = new Vector3(0f, -90f, 0f);
-        else if( horizontalSpeed > 0f) playerT.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
+
 
         if (isJumping) //Movimento continuo di salto
         {
