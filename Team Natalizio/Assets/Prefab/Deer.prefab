@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealt: 0
-  _maxHealt: 2
+  _maxHealt: 1
 --- !u!114 &4611433580489398281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,9 +112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  walkSpeed: 350
+  walkSpeed: 300
   runSpeed: 600
   rayDist: 12.5
+  distDmg: 2
   isWalking: 0
   isRunning: 0
   isAttacking: 0

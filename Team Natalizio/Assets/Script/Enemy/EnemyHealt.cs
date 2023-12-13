@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class EnemyHealt : MonoBehaviour
 {
+    Player player;
+    Animator anim;
     [SerializeField]
     int _currentHealt, _maxHealt;
-    Player player;
+    bool _isDeath;
+    public bool IsDeath { get { return _isDeath; } }
+    
 
     public int HealtPoints
     {
@@ -30,14 +34,9 @@ public class EnemyHealt : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindAnyObjectByType<Player>();
+        anim = GetComponentInParent<Animator>();
         _currentHealt = _maxHealt;
     }
-
-    void Update() 
-    {
-        
-    }
-
 
     public void TakeDamage(int damageAmmount)
     {
@@ -46,7 +45,9 @@ public class EnemyHealt : MonoBehaviour
 
         if(HealtPoints <= 0)
         {
-            Die();
+            //anim.SetBool("Death", true);
+            _isDeath = true;
+            Invoke("Die", 3f);
         }
     }
 

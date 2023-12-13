@@ -7,6 +7,7 @@ public class Deer : MonoBehaviour
 {
     Transform playerPos;
     PlayerHealth playerHP;
+    EnemyHealt myHealth;
     Rigidbody rb;
     Animator anim;
     [SerializeField, Header("Speed")]
@@ -42,6 +43,7 @@ public class Deer : MonoBehaviour
     {
         playerHP = FindAnyObjectByType<PlayerHealth>();
         playerPos = FindAnyObjectByType<Player>().GetComponentInParent<Transform>();
+        myHealth = GetComponent<EnemyHealt>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         state = DeerState.normal;
@@ -62,6 +64,7 @@ public class Deer : MonoBehaviour
         animUpdate();
         DetectPlayer();
         DetectRotation();
+        DeadState();
     }
 
     private void FixedUpdate()
@@ -73,6 +76,20 @@ public class Deer : MonoBehaviour
         else if (state == DeerState.attack)
         {
             AttackMode();
+        }
+    }
+
+    void DeadState()
+    {
+        if (myHealth.IsDeath)
+        {
+            isAttacking = false;
+            isRunning = false;
+            isWalking = false;
+            moveSpeed = 0;
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isRunning", false);
+            enabled = false;
         }
     }
 
@@ -116,7 +133,7 @@ public class Deer : MonoBehaviour
     void animUpdate()
     {
         anim.SetBool("isWalking", isWalking);
-        //anim.SetBool("isRunning", isRunning); DA SISTEMARE
+        anim.SetBool("isRunning", isRunning);
     }
 
     void DetectPlayer()
@@ -175,6 +192,7 @@ public class Deer : MonoBehaviour
             }
             else
             {
+                isRunning = false;
                 restTime = true;
             }
         }

@@ -19,7 +19,9 @@ public class Player : MonoBehaviour
 
     public bool BounceBack { get { return bounceBack; } }
 
+    int _present;
 
+    public int Present { get { return _present; } }
 
 
 
@@ -33,6 +35,15 @@ public class Player : MonoBehaviour
     private void Update()
     {
         SantaAttack();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 7)
+        {
+            _present++;
+            other.gameObject.SetActive(false);
+        }    
     }
 
     void SantaAttack()

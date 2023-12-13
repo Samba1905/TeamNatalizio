@@ -5,9 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealth;
-    [SerializeField]
-    private int currentHealth;
+    int currentHealth, maxHealth;
     [SerializeField]
     float timerImmunity, maxTimerImmunity;
     bool canTakeDamage;
@@ -41,6 +39,16 @@ public class PlayerHealth : MonoBehaviour
     void Update() 
     { 
         TimerImmunity();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.layer == 8)
+        {
+            currentHealth++;
+            other.gameObject.SetActive(false);
+        }
     }
 
     public void TakeDamage(int damageAmount)
