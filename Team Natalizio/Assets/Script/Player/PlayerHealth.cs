@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (other.gameObject.layer == 8)
         {
-            currentHealth++;
+            HealtPoints++;
             other.gameObject.SetActive(false);
         }
     }

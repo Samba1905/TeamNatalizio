@@ -61,7 +61,7 @@ public class Deer : MonoBehaviour
             RestTimer();
             ChangeState();
         }
-        animUpdate();
+        AnimUpdate();
         DetectPlayer();
         DetectRotation();
         DeadState();
@@ -130,7 +130,7 @@ public class Deer : MonoBehaviour
         }    
     }
 
-    void animUpdate()
+    void AnimUpdate()
     {
         anim.SetBool("isWalking", isWalking);
         anim.SetBool("isRunning", isRunning);
