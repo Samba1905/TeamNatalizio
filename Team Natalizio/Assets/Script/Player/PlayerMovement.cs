@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Transform playerT;
     Camera mainCamera;
     Rigidbody rb;
-    Animator anim;
+    public Animator anim;
     Player player;
     #endregion
 
