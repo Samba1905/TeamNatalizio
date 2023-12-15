@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    Player player;
     [SerializeField]
     int currentHealth, maxHealth;
     [SerializeField]
     float timerImmunity, maxTimerImmunity;
-    bool canTakeDamage;
+    public bool canTakeDamage, hitted;
 
     public int HealtPoints
     { 
@@ -32,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        player = GetComponent<Player>();
         currentHealth = maxHealth;
         canTakeDamage = true;
     }
@@ -51,10 +53,13 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage(int damageAmount, Vector3 dir, int KickBackForce)
     {
         if (canTakeDamage)
         {
+            hitted = true;
+            player.rb.AddForce(new Vector3(0, 1, 0) * KickBackForce, ForceMode.Impulse);
+            Debug.Log(dir.normalized.x);
             HealtPoints -= damageAmount;
             Immunity();
             timerImmunity = 0f;
@@ -73,7 +78,10 @@ public class PlayerHealth : MonoBehaviour
     void TimerImmunity()
     {
         timerImmunity += Time.deltaTime;
-        if(timerImmunity >= maxTimerImmunity) canTakeDamage = true;
+        if (timerImmunity >= maxTimerImmunity) 
+        {
+            canTakeDamage = true;
+        } 
     }
 
 

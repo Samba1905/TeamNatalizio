@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     PlayerMovement playerMove;
-    Rigidbody rb;
+    public Rigidbody rb;
 
     [SerializeField]
     float rayLenght;

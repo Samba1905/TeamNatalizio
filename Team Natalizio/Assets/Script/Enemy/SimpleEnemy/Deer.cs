@@ -155,7 +155,7 @@ public class Deer : MonoBehaviour
             Debug.DrawRay(transform.position + Vector3.up, transform.forward * hit.distance, Color.blue);
             if (hit.collider.CompareTag("Player"))
             {
-                playerHP.TakeDamage(1);
+                playerHP.TakeDamage(1, transform.forward, 15);
             }
         }
     }

@@ -31,7 +31,7 @@ public class EnemyMovementAndTouchDmg : MonoBehaviour
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damageAmount);
+                //playerHealth.TakeDamage(damageAmount);
             }
         }
     }

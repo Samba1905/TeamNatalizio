@@ -45,15 +45,15 @@ public class EnemyHealt : MonoBehaviour
 
         if(HealtPoints <= 0)
         {
-            //anim.SetBool("Death", true);
+            anim.SetBool("Death", true);
             _isDeath = true;
-            Invoke("Die", 3f);
+            //Invoke("Die", 3f);
         }
     }
 
 
 
-    void Die()
+    public void Die()
     {
         gameObject.SetActive(false);
     }
