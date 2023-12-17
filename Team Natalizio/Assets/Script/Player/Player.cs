@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
 
     public bool BounceBack { get { return bounceBack; } }
 
+    [SerializeField] TMP_Text currentPresent;
     int _present;
 
     public int Present { get { return _present; } }
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour
     {
         playerMove = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody>();
+        currentPresent.text = Present.ToString();
     }
 
     private void Update()
@@ -43,6 +46,7 @@ public class Player : MonoBehaviour
         {
             _present++;
             other.gameObject.SetActive(false);
+            currentPresent.text = Present.ToString();
         }    
     }
 

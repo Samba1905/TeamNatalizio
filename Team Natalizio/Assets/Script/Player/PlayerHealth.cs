@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     float timerImmunity, maxTimerImmunity;
     bool canTakeDamage;
+    [SerializeField] TMP_Text currentHp; 
 
     public int HealtPoints
     { 
@@ -38,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         currentHealth = maxHealth;
         canTakeDamage = true;
+        currentHp.text = HealtPoints.ToString();
     }
 
     void Update() 
@@ -52,6 +55,7 @@ public class PlayerHealth : MonoBehaviour
         {
             HealtPoints++;
             other.gameObject.SetActive(false);
+            currentHp.text = HealtPoints.ToString();
         }
     }
 
@@ -68,6 +72,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 Die();
             }
+            currentHp.text = HealtPoints.ToString();
         }
     }
 
